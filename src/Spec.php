@@ -1,5 +1,5 @@
 <?php
-namespace Code4Recovery\App;
+namespace Code4Recovery;
 
 class C4RSpec
 {
