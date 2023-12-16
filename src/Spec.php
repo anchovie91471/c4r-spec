@@ -1,7 +1,7 @@
 <?php
-namespace Code4recovery\App;
+namespace Code4Recovery\App;
 
-class C4RSoec
+class C4RSpec
 {
     private static $languages = [
         'en' => 'English',
