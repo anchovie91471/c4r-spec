@@ -1,7 +1,7 @@
 <?php
 namespace Code4Recovery;
 
-class C4RSpec
+class Spec
 {
     private static $languages = [
         'en' => 'English',
@@ -19,7 +19,7 @@ class C4RSpec
      * @param $program
      */
     public function __construct() {
-        if($jsonTypes = file_get_contents('./src/types.json')) {
+        if($jsonTypes = file_get_contents(__DIR__.'/types.json')) {
             self::$types = json_decode($jsonTypes);
         }
     }
