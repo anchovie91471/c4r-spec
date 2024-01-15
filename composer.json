@@ -2,7 +2,8 @@
     "name": "code4recovery/spec",
     "description": "The goal of the Meeting Guide API is help sync information about AA meetings. It was developed for the Meeting Guide app, but it is non-proprietary and other systems are encouraged to make use of it.",
     "require": {
-        "php": ">=7.4"
+        "php": ">=7.4",
+        "ext-json": "*"
     },
     "license": "MIT",
     "autoload": {

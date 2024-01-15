@@ -7,7 +7,7 @@ class Spec
         'en' => 'English',
         'es' => 'Español',
         'fr' => 'Français',
-        'js' => '日本語',
+        'ja' => '日本語',
         'sv' => 'Svenska',
     ];
 
