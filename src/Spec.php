@@ -3,7 +3,7 @@ namespace Code4Recovery;
 
 class Spec
 {
-    private static $languages = [
+    private static array $languages = [
         'en' => 'English',
         'es' => 'Español',
         'fr' => 'Français',
@@ -16,7 +16,6 @@ class Spec
     /**
      * Constructor.
      *
-     * @param $program
      */
     public function __construct() {
         if($jsonTypes = file_get_contents(__DIR__.'/types.json')) {
@@ -32,7 +31,7 @@ class Spec
      *
      * @return string[]
      */
-    public function getLanguages()
+    public function getLanguages(): array
     {
         return self::$languages;
     }
@@ -42,9 +41,9 @@ class Spec
      *
      * Retrieves and returns all types stored in the type repository.
      *
-     * @return array The array of all types.
+     * @return object The array of all types.
      */
-    public function getAllTypes ()
+    public function getAllTypes (): object
     {
         return self::$types;
     }
@@ -57,8 +56,9 @@ class Spec
      *
      * @return array An array of type translations in the specified language.
      */
-    public function getTypesByLanguage($language)
+    public function getTypesByLanguage(string $language): array
     {
+        $typesByLanguage = [];
         foreach (self::$types as $typeKey => $typeTranslations) {
             if (isset($typeTranslations->$language)) {
                 $typesByLanguage[$typeKey] = $typeTranslations->$language;
